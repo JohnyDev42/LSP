@@ -25,7 +25,7 @@
 		perror("open bmp");
 		exit(0);
 	}
-//	lseek(fd,54,SEEK_SET);
+	lseek(fd,54,SEEK_SET);
 //	read(fd,buff,4);
 //	oft=buff[0];
 //	if(ret<0)
@@ -89,12 +89,12 @@
 		exit(0);
 	}
 	for(x=0;x<1366;x)
-     memcpy(fbp,bmp,p.st_size);
+   //  memcpy(fbp,bmp,p.st_size);
      printf("Hello");
     // x = 100; y = 100;       // Where we are going to put the pixel
 
      // Figure out where in memory to put the pixel
- /*   for (y = 0; y < 800; y++)
+    for (y = 0; y < 800; y++)
          for (x = 0; x < 1440; x++) {
              location = (x+vinfo.xoffset) * (vinfo.bits_per_pixel/8) +
                         (y+vinfo.yoffset) * finfo.line_length;
